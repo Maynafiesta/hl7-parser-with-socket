@@ -1,6 +1,7 @@
 #ifndef EDAN_UTILS_H
 #define EDAN_UTILS_H
 
+#include "edan_errors.h"
 
 typedef enum {
     CM = 1, INCH = 2
@@ -43,6 +44,8 @@ typedef struct{
 Results *message_parser(char *message_addr, Results *result_package);
 Results *create_message_packet(Results* result_package);
 Results *print_result_package(Results* result_package);
+int allocate_result_package(Results **result_package) ;
+
 
 
 #endif //EDAN_UTILS_H

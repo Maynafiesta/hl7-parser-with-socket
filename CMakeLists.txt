@@ -4,5 +4,6 @@ project(VitalSignMonitoring C)
 set(CMAKE_C_STANDARD 99)
 
 add_executable(VitalSignMonitoring
-        main.c
-        edan_utils.c    edan_utils.h)
+        test.c
+        edan_utils.c    edan_utils.h
+        edan_socket_utils.c edan_socket_utils.h edan_errors.h)

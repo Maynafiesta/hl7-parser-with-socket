@@ -599,5 +599,12 @@ PUBLIC Results *message_parser(char *message_addr, Results *result_package) {
     return result_package;
 };
 
-
+PUBLIC int allocate_result_package(Results **result_package) {
+    *result_package = (Results*)malloc(sizeof(Results));
+    if (!*result_package) {
+        printf("Insufficient memory!");
+        return INSUFFICIENT_MEMORY_ERROR;
+    }
+    return 0;
+}
 

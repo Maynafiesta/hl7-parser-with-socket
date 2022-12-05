@@ -18,9 +18,7 @@ int main() {
     if (PRINT_STATUS) {
         system("clear");
         if (2 == PRINT_STATUS) {
-            printf("HRt\tPRt\tSpO\tPIn\tRRa\t"
-                   "NSy\tNDi\tNMa\tNPr\t"
-                   "Wei\t\tHei\t\tName\n");
+            print_result_header();
         }
     }
 
@@ -34,7 +32,7 @@ int main() {
 
     for (size_t i = 0; i < 1000; ++i) {
 //        clock_t clock_start = clock();
-        ret = get_socket_package(my_result, ip_address, port_num);
+        ret = get_socket_package(my_result, ip_address, &port_num);
         if (CONNECTION_ERROR == ret) {
             printf("Connection Error!\n");
             exit(EXIT_FAILURE);
@@ -61,3 +59,4 @@ int main() {
 
     return 0;
 }
+

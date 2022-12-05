@@ -44,8 +44,9 @@ typedef struct{
 Results *message_parser(char *message_addr, Results *result_package);
 Results *create_message_packet(Results* result_package);
 
+void print_result_header(void);
 void print_result_package_1(Results* result_package);
 void print_result_package_2(Results* result_package);
-int allocate_result_package(Results **result_package) ;
+int allocate_result_package(Results **result_package);
 
 #endif //EDAN_UTILS_H

@@ -470,6 +470,12 @@ PUBLIC Results *create_message_packet(Results *result_package) {
     return result_package;
 }
 
+PUBLIC void print_result_header(void) {
+    printf("HRt\tPRt\tSpO\tPIn\tRRa\t"
+           "NSy\tNDi\tNMa\tNPr\t"
+           "Wei\t\tHei\t\tName\n");
+}
+
 PUBLIC void print_result_package_1(Results *result_package) {
     printf("Full Name\t:\t%s\n", (*result_package).full_name);
     printf("HR in bpm\t:\t%d\n", (*result_package).heart_rate_in_bpm);
